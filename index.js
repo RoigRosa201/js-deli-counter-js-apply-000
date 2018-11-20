@@ -1,21 +1,18 @@
-function takeANumber (katzDeliLine, name){
-var position = katzDeliLine.length+1
-  katzDeliLine.push(name)
-  return "Welcome, " + name +". You are number "+ position +" in line."
+function takeTicketnumber (katzDeliLine, number){
+  //katzDeliLine.push(name)
+  //reurn "Welcome, " + name +". You are number "+ katzDeliLine.length +" in line."
+  katzDeliLine.push(number)
+  return "Welcome, you are number: " + number + "!"
 
 }
 
 function nowServing (deliLine){
-var name;
-
-if(deliLine.length == 0){
-  return "There is nobody waiting to be served!"
+  if(deliLine.length == 0){
+    return "There is nobody waiting to be served!"
+  }
+  return "Currently serving "+ deliLine.shift() + "."
 }
-
-  name = deliLine.shift()
-  return "Currently serving "+ name + "."
-}
-
+ 
 function currentLine (katzDeliLine){
   if(katzDeliLine.length == 0){
     return "The line is currently empty."
@@ -28,3 +25,4 @@ function currentLine (katzDeliLine){
 }
   return myString
 }
+
